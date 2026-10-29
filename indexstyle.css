@@ -1,0 +1,68 @@
+:root {
+    --navy: #0f1f5c;
+    --blue: #1d3fbb;
+    --blue-light: #eef2ff;
+    --accent: #ff4f1f;
+    --accent-dark: #e03d10;
+    --ink: #14183a;
+    --border: #c9d2f0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+}
+
+/* The form becomes the login card */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 380px;
+    padding: 40px 36px;
+    background: #fff;
+    border-top: 6px solid var(--accent);
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(8, 14, 50, 0.4);
+}
+
+/* Adds a "Login" title without changing your HTML */
+form::before {
+    content: "Login";
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+/* Your <br> tags are replaced by the gap and margins */
+br { display: none; }
+
+label {
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+input {
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--blue-light);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s ease-in-out;
+}
